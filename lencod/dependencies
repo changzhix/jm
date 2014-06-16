@@ -1,0 +1,263 @@
+obj/parset.o.dbg: src/parset.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/contributors.h \
+ inc/mbuffer.h inc/parset.h inc/nalu.h inc/nalucommon.h inc/sei.h \
+ inc/vlc.h inc/q_matrix.h
+obj/md_low.o.dbg: src/md_low.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/rdopt_coding_state.h \
+ inc/mb_access.h inc/intrarefresh.h inc/image.h inc/mbuffer.h \
+ inc/transform8x8.h inc/ratectl.h inc/rc_quadratic.h inc/mode_decision.h \
+ inc/fmo.h inc/me_umhex.h inc/me_umhexsmp.h inc/macroblock.h
+obj/macroblock.o.dbg: src/macroblock.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/elements.h inc/macroblock.h inc/mc_prediction.h \
+ inc/mbuffer.h inc/refbuf.h inc/fmo.h inc/vlc.h inc/image.h \
+ inc/mb_access.h inc/ratectl.h inc/rc_quadratic.h inc/cabac.h \
+ inc/transform8x8.h inc/transform.h inc/me_fullsearch.h inc/symbol.h \
+ inc/rdo_quant.h
+obj/annexb.o.dbg: src/annexb.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/nalucommon.h
+obj/conformance.o.dbg: src/conformance.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h
+obj/sei.o.dbg: src/sei.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/memalloc.h inc/rtp.h \
+ inc/nalu.h inc/nalucommon.h inc/mbuffer.h inc/sei.h inc/vlc.h
+obj/nal.o.dbg: src/nal.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h
+obj/intrarefresh.o.dbg: src/intrarefresh.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h
+obj/rdopt_coding_state.o.dbg: src/rdopt_coding_state.c inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/rdopt_coding_state.h inc/cabac.h
+obj/cabac.o.dbg: src/cabac.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/cabac.h inc/image.h \
+ inc/mbuffer.h inc/mb_access.h
+obj/rtp.o.dbg: src/rtp.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/rtp.h inc/nalu.h \
+ inc/nalucommon.h inc/sei.h
+obj/rdopt.o.dbg: src/rdopt.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/rdopt.h \
+ inc/rdopt_coding_state.h inc/memalloc.h inc/mb_access.h inc/elements.h \
+ inc/intrarefresh.h inc/image.h inc/mbuffer.h inc/transform8x8.h \
+ inc/cabac.h inc/vlc.h inc/me_umhex.h inc/ratectl.h inc/rc_quadratic.h \
+ inc/mode_decision.h inc/rd_intra_jm.h inc/fmo.h inc/macroblock.h \
+ inc/symbol.h inc/q_offsets.h inc/conformance.h
+obj/quant4x4.o.dbg: src/quant4x4.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/quant4x4.h
+obj/mbuffer.o.dbg: src/mbuffer.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/mbuffer.h \
+ inc/memalloc.h inc/output.h inc/image.h inc/mbuffer.h inc/nalucommon.h
+obj/transform.o.dbg: src/transform.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/transform.h
+obj/nalucommon.o.dbg: src/nalucommon.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/nalu.h \
+ inc/nalucommon.h
+obj/refbuf.o.dbg: src/refbuf.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/refbuf.h
+obj/rdpicdecision.o.dbg: src/rdpicdecision.c inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h
+obj/me_umhex.o.dbg: src/me_umhex.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/memalloc.h \
+ inc/me_umhex.h inc/mbuffer.h inc/refbuf.h inc/mb_access.h inc/image.h \
+ inc/me_distortion.h
+obj/configfile.o.dbg: src/configfile.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/configfile.h \
+ inc/fmo.h inc/fmo.h inc/conformance.h
+obj/block.o.dbg: src/block.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/image.h inc/mbuffer.h inc/mb_access.h inc/block.h inc/vlc.h \
+ inc/transform.h inc/mc_prediction.h inc/q_offsets.h inc/q_matrix.h \
+ inc/quant4x4.h
+obj/mb_access.o.dbg: src/mb_access.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/mb_access.h
+obj/input.o.dbg: src/input.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/input.h
+obj/output.o.dbg: src/output.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/image.h inc/mbuffer.h inc/input.h
+obj/quant4x4_trellis.o.dbg: src/quant4x4_trellis.c inc/contributors.h \
+ inc/global.h inc/win32.h inc/defines.h inc/parsetcommon.h \
+ inc/ifunctions.h inc/frame.h inc/image.h inc/mbuffer.h inc/mb_access.h \
+ inc/vlc.h inc/transform.h inc/mc_prediction.h inc/q_offsets.h \
+ inc/q_matrix.h inc/quant4x4.h inc/rdo_quant.h
+obj/header.o.dbg: src/header.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/elements.h \
+ inc/header.h inc/rtp.h inc/nalu.h inc/nalucommon.h inc/mbuffer.h \
+ inc/vlc.h inc/parset.h inc/sei.h
+obj/weighted_prediction.o.dbg: src/weighted_prediction.c inc/contributors.h \
+ inc/global.h inc/win32.h inc/defines.h inc/parsetcommon.h \
+ inc/ifunctions.h inc/frame.h inc/image.h inc/mbuffer.h inc/wp.h
+obj/quant8x8_around.o.dbg: src/quant8x8_around.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/mb_access.h inc/vlc.h \
+ inc/transform.h inc/mc_prediction.h inc/q_offsets.h inc/q_matrix.h \
+ inc/quant8x8.h
+obj/md_distortion.o.dbg: src/md_distortion.c inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/rdopt_coding_state.h inc/mb_access.h inc/intrarefresh.h inc/image.h \
+ inc/mbuffer.h inc/transform8x8.h inc/ratectl.h inc/rc_quadratic.h \
+ inc/mode_decision.h inc/fmo.h inc/me_umhex.h inc/me_umhexsmp.h \
+ inc/macroblock.h
+obj/quant8x8.o.dbg: src/quant8x8.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/quant8x8.h
+obj/md_highloss.o.dbg: src/md_highloss.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/rdopt_coding_state.h \
+ inc/mb_access.h inc/intrarefresh.h inc/image.h inc/mbuffer.h \
+ inc/transform8x8.h inc/ratectl.h inc/rc_quadratic.h inc/mode_decision.h \
+ inc/fmo.h inc/me_umhex.h inc/me_umhexsmp.h inc/macroblock.h
+obj/memalloc.o.dbg: src/memalloc.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h
+obj/mv-search.o.dbg: src/mv-search.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/image.h inc/mbuffer.h inc/mv-search.h inc/refbuf.h inc/memalloc.h \
+ inc/mb_access.h inc/macroblock.h inc/mc_prediction.h inc/conformance.h \
+ inc/me_distortion.h inc/me_epzs.h inc/me_fullfast.h inc/me_fullsearch.h \
+ inc/me_umhex.h inc/me_umhexsmp.h inc/rdo_quant.h
+obj/me_distortion.o.dbg: src/me_distortion.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/memalloc.h inc/mb_access.h \
+ inc/refbuf.h inc/me_distortion.h
+obj/mc_prediction.o.dbg: src/mc_prediction.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/macroblock.h inc/mc_prediction.h inc/mbuffer.h \
+ inc/refbuf.h inc/image.h inc/mb_access.h
+obj/vlc.o.dbg: src/vlc.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/vlc.h
+obj/mode_decision.o.dbg: src/mode_decision.c inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/rdopt_coding_state.h inc/mb_access.h inc/intrarefresh.h inc/image.h \
+ inc/mbuffer.h inc/transform8x8.h inc/ratectl.h inc/rc_quadratic.h \
+ inc/mode_decision.h inc/fmo.h inc/me_umhex.h inc/me_umhexsmp.h \
+ inc/macroblock.h inc/rdo_quant.h
+obj/leaky_bucket.o.dbg: src/leaky_bucket.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h
+obj/nalu.o.dbg: src/nalu.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/nalu.h \
+ inc/nalucommon.h
+obj/img_luma.o.dbg: src/img_luma.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/image.h inc/mbuffer.h inc/img_luma.h inc/memalloc.h
+obj/quant4x4_normal.o.dbg: src/quant4x4_normal.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/mb_access.h inc/vlc.h \
+ inc/transform.h inc/mc_prediction.h inc/q_offsets.h inc/q_matrix.h \
+ inc/quant4x4.h
+obj/biariencode.o.dbg: src/biariencode.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/biariencode.h
+obj/md_highfast.o.dbg: src/md_highfast.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/rdopt_coding_state.h \
+ inc/mb_access.h inc/intrarefresh.h inc/image.h inc/mbuffer.h \
+ inc/transform8x8.h inc/ratectl.h inc/rc_quadratic.h inc/mode_decision.h \
+ inc/fmo.h inc/me_umhex.h inc/me_umhexsmp.h inc/macroblock.h
+obj/fmo.o.dbg: src/fmo.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/fmo.h
+obj/md_high.o.dbg: src/md_high.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/rdopt_coding_state.h \
+ inc/mb_access.h inc/intrarefresh.h inc/image.h inc/mbuffer.h \
+ inc/transform8x8.h inc/ratectl.h inc/rc_quadratic.h inc/mode_decision.h \
+ inc/fmo.h inc/me_umhex.h inc/me_umhexsmp.h inc/macroblock.h
+obj/ratectl.o.dbg: src/ratectl.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/ratectl.h \
+ inc/rc_quadratic.h
+obj/rdo_quant.o.dbg: src/rdo_quant.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/image.h inc/mbuffer.h inc/fmo.h inc/macroblock.h inc/mb_access.h \
+ inc/ratectl.h inc/rc_quadratic.h inc/rdo_quant.h
+obj/quant8x8_normal.o.dbg: src/quant8x8_normal.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/mb_access.h inc/vlc.h \
+ inc/transform.h inc/mc_prediction.h inc/q_offsets.h inc/q_matrix.h \
+ inc/quant8x8.h
+obj/context_ini.o.dbg: src/context_ini.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/ctx_tables.h \
+ inc/cabac.h
+obj/parsetcommon.o.dbg: src/parsetcommon.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/memalloc.h
+obj/loopFilter.o.dbg: src/loopFilter.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/image.h \
+ inc/mbuffer.h inc/mb_access.h
+obj/q_offsets.o.dbg: src/q_offsets.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/memalloc.h \
+ inc/q_matrix.h inc/q_offsets.h
+obj/explicit_gop.o.dbg: src/explicit_gop.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/contributors.h \
+ inc/explicit_gop.h inc/image.h inc/mbuffer.h inc/nalucommon.h
+obj/me_fullsearch.o.dbg: src/me_fullsearch.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/memalloc.h inc/mb_access.h \
+ inc/refbuf.h inc/me_distortion.h inc/me_fullsearch.h
+obj/q_matrix.o.dbg: src/q_matrix.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/memalloc.h
+obj/lencod.o.dbg: src/lencod.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/configfile.h inc/fmo.h inc/leaky_bucket.h inc/memalloc.h \
+ inc/intrarefresh.h inc/fmo.h inc/sei.h inc/parset.h inc/nalu.h \
+ inc/nalucommon.h inc/sei.h inc/image.h inc/mbuffer.h inc/input.h \
+ inc/output.h inc/me_epzs.h inc/me_umhex.h inc/me_umhexsmp.h \
+ inc/ratectl.h inc/rc_quadratic.h inc/explicit_gop.h inc/context_ini.h \
+ inc/q_matrix.h inc/q_offsets.h inc/rdo_quant.h
+obj/rd_intra_jm.o.dbg: src/rd_intra_jm.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/rdopt_coding_state.h \
+ inc/memalloc.h inc/mb_access.h inc/elements.h inc/intrarefresh.h \
+ inc/image.h inc/mbuffer.h inc/transform8x8.h inc/cabac.h inc/vlc.h \
+ inc/ratectl.h inc/rc_quadratic.h inc/mode_decision.h inc/macroblock.h \
+ inc/symbol.h inc/q_offsets.h inc/rdopt.h inc/rd_intra_jm.h
+obj/me_epzs.o.dbg: src/me_epzs.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/image.h inc/mbuffer.h inc/memalloc.h inc/mb_access.h inc/refbuf.h \
+ inc/me_distortion.h inc/me_epzs.h
+obj/rc_quadratic.o.dbg: src/rc_quadratic.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/ratectl.h \
+ inc/rc_quadratic.h
+obj/quant8x8_trellis.o.dbg: src/quant8x8_trellis.c inc/contributors.h \
+ inc/global.h inc/win32.h inc/defines.h inc/parsetcommon.h \
+ inc/ifunctions.h inc/frame.h inc/image.h inc/mbuffer.h inc/mb_access.h \
+ inc/vlc.h inc/transform.h inc/mc_prediction.h inc/q_offsets.h \
+ inc/q_matrix.h inc/quant8x8.h inc/rdo_quant.h
+obj/transform8x8.o.dbg: src/transform8x8.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/image.h \
+ inc/mbuffer.h inc/mb_access.h inc/elements.h inc/cabac.h inc/vlc.h \
+ inc/transform8x8.h inc/transform.h inc/macroblock.h inc/symbol.h \
+ inc/mc_prediction.h inc/quant8x8.h inc/rdo_quant.h inc/q_matrix.h \
+ inc/q_offsets.h
+obj/filehandle.o.dbg: src/filehandle.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/rtp.h inc/nalu.h inc/nalucommon.h inc/annexb.h \
+ inc/parset.h inc/sei.h inc/mbuffer.h
+obj/symbol.o.dbg: src/symbol.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/symbol.h
+obj/img_chroma.o.dbg: src/img_chroma.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/img_chroma.h
+obj/quant4x4_around.o.dbg: src/quant4x4_around.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/mb_access.h inc/vlc.h \
+ inc/transform.h inc/mc_prediction.h inc/q_offsets.h inc/q_matrix.h \
+ inc/quant4x4.h
+obj/me_fullfast.o.dbg: src/me_fullfast.c inc/contributors.h inc/global.h \
+ inc/win32.h inc/defines.h inc/parsetcommon.h inc/ifunctions.h \
+ inc/frame.h inc/image.h inc/mbuffer.h inc/memalloc.h inc/mb_access.h \
+ inc/refbuf.h inc/me_distortion.h inc/me_fullsearch.h inc/conformance.h
+obj/decoder.o.dbg: src/decoder.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/refbuf.h inc/image.h \
+ inc/mbuffer.h
+obj/slice.o.dbg: src/slice.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/header.h inc/rtp.h inc/nalu.h inc/nalucommon.h inc/fmo.h inc/vlc.h \
+ inc/image.h inc/mbuffer.h inc/cabac.h inc/elements.h inc/macroblock.h \
+ inc/symbol.h inc/context_ini.h inc/ratectl.h inc/rc_quadratic.h \
+ inc/me_epzs.h inc/wp.h inc/q_offsets.h inc/conformance.h inc/rdo_quant.h
+obj/image.o.dbg: src/image.c inc/contributors.h inc/global.h inc/win32.h \
+ inc/defines.h inc/parsetcommon.h inc/ifunctions.h inc/frame.h \
+ inc/refbuf.h inc/mbuffer.h inc/img_luma.h inc/img_chroma.h \
+ inc/intrarefresh.h inc/fmo.h inc/sei.h inc/memalloc.h inc/nalu.h \
+ inc/nalucommon.h inc/ratectl.h inc/rc_quadratic.h inc/mb_access.h \
+ inc/output.h inc/cabac.h inc/context_ini.h inc/conformance.h \
+ inc/q_matrix.h inc/q_offsets.h inc/quant4x4.h inc/quant8x8.h inc/wp.h \
+ inc/input.h
+obj/me_umhexsmp.o.dbg: src/me_umhexsmp.c inc/global.h inc/win32.h inc/defines.h \
+ inc/parsetcommon.h inc/ifunctions.h inc/frame.h inc/memalloc.h \
+ inc/me_umhexsmp.h inc/mbuffer.h inc/refbuf.h inc/me_distortion.h
