@@ -22,6 +22,11 @@
 #include "input.h"
 #include "fast_memory.h"
 
+#include<stdio.h>
+#include<openssl/md5.h>
+#include<string.h>
+#define PRINT_MARK  printf( "file: %s, \tfunc: %s, \tline: %d\n", __FILE__, __FUNCTION__, __LINE__ );
+
 static void write_out_picture(VideoParameters *p_Vid, StorablePicture *p, int p_out);
 static void img2buf_byte   (imgpel** imgX, unsigned char* buf, int size_x, int size_y, int symbol_size_in_bytes, int crop_left, int crop_right, int crop_top, int crop_bottom, int iOutStride);
 static void img2buf_normal (imgpel** imgX, unsigned char* buf, int size_x, int size_y, int symbol_size_in_bytes, int crop_left, int crop_right, int crop_top, int crop_bottom, int iOutStride);
@@ -544,7 +549,8 @@ static void write_out_picture(VideoParameters *p_Vid, StorablePicture *p, int p_
     no_mem_exit("write_out_picture: buf");
   }
 
-  
+  MD5_CTX ctx;
+  MD5_Init(&ctx);  
   if(rgb_output)
   {
     buf = malloc (p->size_x * p->size_y * symbol_size_in_bytes);
@@ -561,6 +567,7 @@ static void write_out_picture(VideoParameters *p_Vid, StorablePicture *p, int p_
       {
         error ("write_out_picture: error writing to RGB file", 500);
       }
+      MD5_Update(&ctx,buf,ret);
     }
 
     if (p->frame_cropping_flag)
@@ -588,6 +595,7 @@ static void write_out_picture(VideoParameters *p_Vid, StorablePicture *p, int p_
     {
       error ("write_out_picture: error writing to YUV file", 500);
     }
+    MD5_Update(&ctx,buf,ret);
   }
 
   if (p->chroma_format_idc!=YUV400)
@@ -605,6 +613,7 @@ static void write_out_picture(VideoParameters *p_Vid, StorablePicture *p, int p_
       {
         error ("write_out_picture: error writing to YUV file", 500);
       }
+      MD5_Update(&ctx,buf,ret);
     }
 
     if (!rgb_output)
@@ -619,6 +628,7 @@ static void write_out_picture(VideoParameters *p_Vid, StorablePicture *p, int p_
         {
           error ("write_out_picture: error writing to YUV file", 500);
         }
+        MD5_Update(&ctx,buf,ret);
       }
     }
   }
@@ -648,16 +658,48 @@ static void write_out_picture(VideoParameters *p_Vid, StorablePicture *p, int p_
       {
         error ("write_out_picture: error writing to YUV file", 500);
       }
+      MD5_Update(&ctx,buf,ret);
       ret = write(p_out, buf, symbol_size_in_bytes * (p->size_y-crop_bottom-crop_top)/2 * (p->size_x-crop_right-crop_left)/2 );
       if (ret != (symbol_size_in_bytes * (p->size_y-crop_bottom-crop_top)/2 * (p->size_x-crop_right-crop_left)/2))
       {
         error ("write_out_picture: error writing to YUV file", 500);
       }
+      MD5_Update(&ctx,buf,ret);
       free(buf);
       free_mem3Dpel(p->imgUV);
       p->imgUV=NULL;
     }
   }
+
+  unsigned char md[16];
+  MD5_Final(md,&ctx);
+  char md5buf[64]={'\0'};
+  char tmp[3]={'\0'};
+  int i = 0;
+  for( i=0; i<16; i++ ) {
+    sprintf(tmp,"%02x",md[i]);
+    strcat(md5buf,tmp);
+  }
+  char md5buf1[64] = {0};
+  sprintf(md5buf1, "%s\n", md5buf);
+  printf("md5: %s\n", md5buf1);
+
+  char md5filename[256] = {0};
+  char *play_file_name = NULL;
+  play_file_name = getenv ("PLAY_FILE_NAME");
+  if (play_file_name) {
+    sprintf(md5filename, "/root/multimedia/simple-player/ref/jm/%s.md5",play_file_name);
+  }
+  else
+    sprintf(md5filename, "/root/multimedia/simple-player/ref/jm/%s.md5","jm");
+
+  printf("md5filename %s\n", md5filename);
+  FILE *OutputMd5 = fopen(md5filename,"ab+");
+  if(!OutputMd5)
+    printf("open error\n");
+
+  fwrite(md5buf1,strlen(md5buf1),1,OutputMd5);
+  fclose(OutputMd5);
 
   //free(buf);
  if(p_out >=0)
